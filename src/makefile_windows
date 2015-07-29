@@ -1,0 +1,46 @@
+# OLD may need modifications.
+
+CC   = gcc.exe
+OBJ  = dataload.o drawing.o init.o input.o logic.o main.o shutdown.o timer.o game.o screen_gameplay.o sound.o
+LIBS =  -L"C:/MinGW/lib" -mwindows -lmingw32 -lSDLmain -lSDL -lfreeglut -lglu32 -lopengl32 -lSDL_image -lwinmm -lgdi32 -lfmod  
+INCS =  -I"C:/MinGW/include" 
+BIN  = ../gnats_tetris_machine.exe
+CFLAGS = $(INCS) -Dmain=SDL_main -DFREEGLUT_STATIC   -ansi
+
+all: all-before ../gnatstetrismachine.exe all-after
+
+$(BIN): $(OBJ)
+	$(CC) $(OBJ) -o "..\gnatstetrismachine.exe" $(LIBS)
+
+obj/dataload.o: dataload.c
+	$(CC) -c dataload.c -o obj/dataload.o $(CFLAGS)
+
+obj/drawing.o: drawing.c
+	$(CC) -c drawing.c -o obj/drawing.o $(CFLAGS)
+
+obj/init.o: init.c
+	$(CC) -c init.c -o obj/init.o $(CFLAGS)
+
+obj/input.o: input.c
+	$(CC) -c input.c -o obj/input.o $(CFLAGS)
+
+obj/logic.o: logic.c
+	$(CC) -c logic.c -o obj/logic.o $(CFLAGS)
+
+obj/main.o: main.c
+	$(CC) -c main.c -o obj/main.o $(CFLAGS)
+
+obj/shutdown.o: shutdown.c
+	$(CC) -c shutdown.c -o obj/shutdown.o $(CFLAGS)
+
+obj/timer.o: timer.c
+	$(CC) -c timer.c -o obj/timer.o $(CFLAGS)
+
+obj/game.o: game.c
+	$(CC) -c game.c -o obj/game.o $(CFLAGS)
+
+obj/screen_gameplay.o: screen_gameplay.c
+	$(CC) -c screen_gameplay.c -o obj/screen_gameplay.o $(CFLAGS)
+
+obj/sound.o: sound.c
+	$(CC) -c sound.c -o obj/sound.o $(CFLAGS)

@@ -1,2 +1,16 @@
-# tetrismachine
-Gnat's Tetris Machine
+**Gnat's Tetris Machine is a remake of Alexey Pajitnov's classic "Tetris" from 1985.**
+
+Gnat's Tetris Machine is written in pure C, and makes use of the OpenGL API for 3D graphics, and SDL for things like input and sound. It features a clean, commented, well structured C source code that can be used as a resource for learning how to program video games in C.
+
+WASD or Arrow Keys to move current brick. ESC to quit.
+
+Gnat's Tetris Machine was originally written by Nathaniel Sabanski.
+
+**Gameplay Tips**
+
+Points multiply for clearing more than 1 row at a time. Large bonus for clearing 4 rows at a time (Pajitnov calls this a "Tetris"). See how many "Wanted Stars" you can get. If you manage to survive long enough, you may get to see the special Pepperidge Farms ending.* 
+
+<img src="http://i.imgur.com/3GcsGzT.png" alt="Gnat's Tetris Machine Screenshot 1" />
+
+* There really is no "Pepperidge Farms" ending.
+

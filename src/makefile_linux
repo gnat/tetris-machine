@@ -1,0 +1,11 @@
+OUT = gnats_tetris_machine
+CXX = gcc
+LIB = -L. -lSDL -lSDLmain -lSDL_image -lglut -lGLU -lGL -lfmodex64 
+
+SOURCES = dataload.c drawing.c init.c input.c logic.c main.c shutdown.c timer.c game.c screen_gameplay.c sound.c
+OBJECTS = ${sources:.c=.o}
+
+all: $(OUT)
+
+$(OUT): $(OBJECTS)
+	$(CXX) ${SOURCES} -Wl,-R. -o ${OUT} ${LIB}
