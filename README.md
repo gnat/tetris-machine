@@ -1,8 +1,6 @@
 **Gnat's Tetris Machine is a remake of Alexey Pajitnov's classic "Tetris" from 1985.**
 
-Gnat's Tetris Machine is written in pure C, and makes use of the OpenGL API for 3D graphics, and SDL for things like input and sound. It features a clean, commented, well structured C source code that can be used as a resource for learning how to program video games in C.
-
-WASD or Arrow Keys to move current brick. ESC to quit.
+Gnat's Tetris Machine is written in pure ANSI C, OpenGL API for 3D graphics, and SDL for input and sound. It features a clean, commented, C source code that can be used as a resource for learning how to program video games in C. Makefiles for Linux and Windows included.
 
 Gnat's Tetris Machine was originally written by Nathaniel Sabanski.
 

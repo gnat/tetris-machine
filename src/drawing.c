@@ -5,40 +5,40 @@
 */
 void EnableOrtho2D() 
 {
-	glMatrixMode(GL_PROJECTION);
-	glPushMatrix();
-	glLoadIdentity();
-    
-	glOrtho(0, width, height, 0, -10, 10);
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+    glLoadIdentity();
+
+    glOrtho(0, width, height, 0, -10, 10);
 
     glMatrixMode(GL_TEXTURE);
-	glPushMatrix();
-	glLoadIdentity();
-	glOrtho(0, 2, 0, 2, 0, 1);
-	
-	glMatrixMode(GL_MODELVIEW);
-	glPushMatrix();
-	glLoadIdentity();
-	/* .. you want to resume in modelview mode, so do it last. */
+    glPushMatrix();
+    glLoadIdentity();
+    glOrtho(0, 2, 0, 2, 0, 1);
 
-	/* Make sure the rest of the program knows by setting a state. */
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    glLoadIdentity();
+    /* .. you want to resume in modelview mode, so do it last. */
+
+    /* Make sure the rest of the program knows by setting a state. */
     rendering_ortho = true;
 }
 
 /**
-* DisableOrtho2D. Pops ortho mode from the matrix stack, returning the projection and modelview matrixes to their former selves.
+* DisableOrtho2D. Pops ortho mode from the matrix stack, returning the projection and modelview matricies to their former selves.
 */
 void DisableOrtho2D() 
 {
-	glMatrixMode(GL_PROJECTION);
-	glPopMatrix();
-	glMatrixMode(GL_TEXTURE);
-	glPopMatrix();
-	glMatrixMode(GL_MODELVIEW);
-	glPopMatrix();
-	/* .. you want to resume in modelview mode, so do it last. */
-	
-	/* Make sure the rest of the program knows by setting a state. */
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_TEXTURE);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    glPopMatrix();
+    /* .. you want to resume in modelview mode, so do it last. */
+
+    /* Make sure the rest of the program knows by setting a state. */
     rendering_ortho = false;
 }
 
