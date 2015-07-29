@@ -39,19 +39,19 @@ void SetupRenderingContext()
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
     glFrontFace(GL_CCW); /* Counter clockwise polys face out. */
- 
-	glAlphaFunc(GL_GREATER, 0.01); /* Skip pixels which alpha channel is lower than 0.01. */
+
+    glAlphaFunc(GL_GREATER, 0.01); /* Skip pixels which alpha channel is lower than 0.01. */
     glEnable(GL_TEXTURE_2D);  /* Enable 2D texturing. */
     glEnable(GL_BLEND);  /* Enable blending. */
     glEnable(GL_ALPHA_TEST);  /* Enable alpha. */
     glEnable(GL_CULL_FACE);  /* Make sure face culling is enabled for speed. */
-	glBlendFunc(GL_SRC_ALPHA , GL_ONE_MINUS_SRC_ALPHA);  /* Turn on alpha blending. */
-	
-	glPointSize(2); /* Size of points. */
-    
+    glBlendFunc(GL_SRC_ALPHA , GL_ONE_MINUS_SRC_ALPHA);  /* Turn on alpha blending. */
+
+    glPointSize(2); /* Size of points. */
+
     glPolygonMode(GL_FRONT, GL_FILL);
     glPolygonMode(GL_BACK, GL_NONE);
-    
+
     glShadeModel(GL_SMOOTH); /* Smooth shading. */
 
     /* Enable Lighting. */

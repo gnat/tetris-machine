@@ -86,21 +86,21 @@ void Draw2DTextureEx(float _x, float _y, float _z, float _alpha,  TEXTURE* _tex)
         glColor4f ( 1.0f, 1.0f, 1.0f, _alpha );
         glEnable(GL_TEXTURE_2D);
         glBegin(GL_QUADS);
-            /* Top left. */
-            glTexCoord2f(0, 0);
-            glVertex2f(0, 0);
-            
-            /* Bottom left. */
-            glTexCoord2f(0, 1);
-            glVertex2f(0, 1);
-    
-            /* Bottom right.*/
-            glTexCoord2f(1, 1);
-            glVertex2f(1, 1);
-            
-            /* Top right. */
-            glTexCoord2f(1, 0);
-            glVertex2f(1, 0);
+        /* Top left. */
+        glTexCoord2f(0, 0);
+        glVertex2f(0, 0);
+        
+        /* Bottom left. */
+        glTexCoord2f(0, 1);
+        glVertex2f(0, 1);
+
+        /* Bottom right.*/
+        glTexCoord2f(1, 1);
+        glVertex2f(1, 1);
+        
+        /* Top right. */
+        glTexCoord2f(1, 0);
+        glVertex2f(1, 0);
         glEnd();  
         glDisable(GL_TEXTURE_2D);
         
@@ -191,21 +191,21 @@ void Draw2DNumberFromRightEx(float _x, float _y, float _z, float _alpha, TEXTURE
             glColor4f ( 1.0f, 1.0f, 1.0f, _alpha );
             
             glBegin(GL_QUADS);
-                /* Top left. */
-                glTexCoord2f((float)current_char_x/_tex->width, 0);
-                glVertex2f(0, 0);
-                
-                /* Bottom left. */
-                glTexCoord2f((float)current_char_x/_tex->width, 1);
-                glVertex2f(0, 1);
-                
-                /* Bottom right. */
-                glTexCoord2f((float)(current_char_x+_char_width)/_tex->width, 1);
-                glVertex2f(1, 1);
-                
-                /* Top right. */
-                glTexCoord2f((float)(current_char_x+_char_width)/_tex->width, 0);
-                glVertex2f(1, 0);
+            /* Top left. */
+            glTexCoord2f((float)current_char_x/_tex->width, 0);
+            glVertex2f(0, 0);
+            
+            /* Bottom left. */
+            glTexCoord2f((float)current_char_x/_tex->width, 1);
+            glVertex2f(0, 1);
+            
+            /* Bottom right. */
+            glTexCoord2f((float)(current_char_x+_char_width)/_tex->width, 1);
+            glVertex2f(1, 1);
+            
+            /* Top right. */
+            glTexCoord2f((float)(current_char_x+_char_width)/_tex->width, 0);
+            glVertex2f(1, 0);
             glEnd();  
         }
 
