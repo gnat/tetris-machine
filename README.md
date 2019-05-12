@@ -3,7 +3,7 @@
 
 Tetris Machine is written in pure ANSI C using OpenGL API for 3D graphics, and SDL for input and sound. It features a clean, commented source code that can be used as a resource for learning how to program video games in C. Makefiles for Linux and Windows included.
 
-Tetris Machine was originally written by Nathaniel Sabanski.
+All code and graphics created by Nathaniel Sabanski (http://natpixels.com)
 
 ## Gameplay Tips
 
